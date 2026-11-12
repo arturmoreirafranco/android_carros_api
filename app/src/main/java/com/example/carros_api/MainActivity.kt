@@ -47,7 +47,30 @@ val listaCarros = listOf(
     Carro(1, "Carro1", 2026, "Mercedez", "Mercedes AMG A45", Color(0xFFB0B7C0), "2.0 Flex", "177 cv", "14,5 km/L", "9,2 s"),
     Carro(2, "Carro2", 2026, "Audi", "Audi A5", Color(0xFF1E3FBF), "2.0 Turbo", "252 cv", "11,0 km/L", "5,8 s"),
     Carro(3, "Carro3", 2026, "Honda", "Honda NX", Color(0xFF7A8FA8), "2.5 Hibrido", "200 cv", "16,0 km/L", "7,5 s"),
-    Carro(4, "Carro4", 2026, "Bugatti", "Bugatti Chiron", Color(0xFF222222), "8.0 W16", "1500 cv", "3,0 km/L", "2,4 s")
+    Carro(4, "Carro4", 2026, "Bugatti", "Bugatti Chiron", Color(0xFF222222), "8.0 W16", "1500 cv", "3,0 km/L", "2,4 s"),
+    Carro(5, "Carro5", 2026, "jaguar", "jaguar", Color(0xFF222222), "8.0 W16", "1500 cv", "3,0 km/L", "2,4 s"),
+    Carro(6, "Carro6", 2026, "ferrari", "Bugatti Chiron", Color(0xFF222222), "8.0 W16", "1500 cv", "3,0 km/L", "2,4 s"),
+    Carro(7, "Carro5", 2025, "Ferrari", "Ferrari SF90 Stradale", Color(0xFFFF0000), "4.0 V8 Biturbo", "1000 cv", "6,5 km/L", "2,5 s"),
+
+    Carro(8, "Carro6", 2024, "Lamborghini", "Lamborghini Revuelto", Color(0xFFFFFF00), "6.5 V12 Híbrido", "1015 cv", "5,8 km/L", "2,5 s"),
+
+    Carro(9, "Carro7", 2025, "Porsche", "Porsche 911 GT3 RS", Color(0xFF00AA00), "4.0 Boxer 6", "525 cv", "7,2 km/L", "3,2 s"),
+
+    Carro(10, "Carro8", 2024, "McLaren", "McLaren 750S", Color(0xFFFF8800), "4.0 V8 Biturbo", "750 cv", "6,8 km/L", "2,8 s"),
+
+    Carro(11, "Carro9", 2025, "Koenigsegg", "Koenigsegg Jesko", Color(0xFF0000FF), "5.0 V8 Biturbo", "1600 cv", "4,5 km/L", "2,5 s"),
+
+    Carro(12, "Carro10", 2024, "Mercedes-Benz", "Mercedes-AMG GT 63", Color(0xFF888888), "4.0 V8 Biturbo", "585 cv", "7,0 km/L", "3,2 s"),
+
+    Carro(13, "Carro11", 2025, "BMW", "BMW M4 Competition", Color(0xFF00008B), "3.0 6 cilindros Biturbo", "510 cv", "8,5 km/L", "3,9 s"),
+
+    Carro(14, "Carro12", 2024, "Audi", "Audi R8 V10 Performance", Color(0xFF800080), "5.2 V10", "620 cv", "6,0 km/L", "3,1 s"),
+
+    Carro(15, "Carro13", 2025, "Nissan", "Nissan GT-R Nismo", Color(0xFF444444), "3.8 V6 Biturbo", "600 cv", "6,5 km/L", "2,8 s"),
+
+    Carro(16, "Carro14", 2024, "Chevrolet", "Chevrolet Corvette Z06", Color(0xFFAA0000), "5.5 V8", "670 cv", "5,5 km/L", "2,6 s")
+
+
 )
 
 class MainActivity : ComponentActivity() {
@@ -280,6 +303,7 @@ fun ItemCarro(carro: Carro, favorito: Boolean, onToggle: (Int) -> Unit, onAbrir:
             Spacer(Modifier.height(4.dp))
             Text(carro.marca, fontSize = 16.sp)
         }
+
         IconButton(onClick = { onToggle(carro.id) }) {
             Icon(
                 if (favorito) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder, "Favoritar",
